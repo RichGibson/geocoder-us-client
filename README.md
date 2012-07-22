@@ -21,7 +21,7 @@ The site offers an API with several different interfaces. This node modules uses
 the json interface.
 
 Example of a call to Geocoder.us
-http://rpc.geocoder.us/service/json?address=1600+Pennsylvania+Ave,+Washington+DC&parse_address=1
+http://rpc.geocoder.us/service/json?address=1600+Pennsylvania+Ave,+Washington+DC
 
 The results of that API call are:
 <pre>
@@ -49,4 +49,20 @@ standardization, and on breaking out the address componenets.
 In the results you can see that you now have the address components broken out. Also note 
 that geocoder.us returns an array of results. If you enter an ambiguous address, for 
 example omitting 'North' on an address, you can get multiple returned addresses.
+
+You can also look up a zip code (or normally a city and state, but city-state geocoding
+is currently down).
+
+http://rpc.geocoder.us/service/json?zip=95473
+<pre>
+[
+   {
+      "zip" : "95473",
+      "city" : "Sebastopol",
+      "lat" : "38.325851",
+      "long" : "-122.505846",
+      "state" : "CA"
+   }
+]
+</pre>
 
