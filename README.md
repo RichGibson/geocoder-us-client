@@ -24,6 +24,7 @@ Example of a call to Geocoder.us
 http://rpc.geocoder.us/service/json?address=1600+Pennsylvania+Ave,+Washington+DC&parse_address=1
 
 The results of that API call are:
+<pre>
 [
    {
       "number" : "1600",
@@ -39,6 +40,7 @@ The results of that API call are:
       "prefix" : ""
    }
 ]
+</pre>
 
 Note that the API call did not require you to have your address data in seperate variables 
 for street, city,state, and zip.  Schuyler's original code does a lot of work on address 
